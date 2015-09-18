@@ -19,12 +19,19 @@ inside your own data center. It automatically creates hosts, installs Docker on
 them, then configures the `docker` client to talk to them. A "machine" is the
 combination of a Docker host and a configured client.
 
-Once you create one or more Docker hosts, Docker Machine supplies a number of commands for
-managing them. Using these commands you can
+Once you create one or more Docker hosts, Docker Machine supplies a number of
+commands for managing them. Using these commands you can
 
  - start, inspect, stop, and restart a host
  - upgrade the Docker client and daemon
  - configure a Docker client to talk to your host
+
+### Looking for the installation docs?
+
+For Windows or Mac, you can obtain Docker Machine by installing the [Docker
+Toolbox](https://www.docker.com/toolbox ). To read instructions for installing
+Machine on Linux or for installing Machine alone without Docker Toolbox, see the
+[Machine installation instructions](install-machine.md).
 
 ## Understand Docker Machine basic concepts
 
@@ -32,7 +39,7 @@ Docker Machine allows you to provision Docker on virtual machines that reside ei
 
 To create a virtual machine, you supply Docker Machine with the name of the driver you want use. The driver represents the virtual environment. For example, on a local Linux, Mac, or Windows system the driver is typically Oracle Virtual Box. For cloud providers, Docker Machine supports drivers such as AWS, Microsoft Azure, Digital Ocean and many more. The Docker Machine reference includes a complete [list of the supported drivers](/drivers).
 
-Since Docker runs on Linux, each VM that Docker Machine provisions relies on a base operating system. For convenience, there are default base operating systems. For the Oracle Virtual Box driver, this base operating system is the `boot2docker.iso`. For drivers used to connect to cloud providers, the base operating system is Ubuntu 12.04+. You can change this default when you create a machine. The Docker Machine reference includes a complete [list of the supported operating sytems](/drivers/os-base).
+Since Docker runs on Linux, each VM that Docker Machine provisions relies on a base operating system. For convenience, there are default base operating systems. For the Oracle Virtual Box driver, this base operating system is the `boot2docker.iso`. For drivers used to connect to cloud providers, the base operating system is Ubuntu 12.04+. You can change this default when you create a machine. The Docker Machine reference includes a complete [list of the supported operating systems](/drivers/os-base).
 
 For each machine you create, the Docker host address is the IP address of the
 Linux VM. This address is assigned by the `docker-machine create` subcommand.
