@@ -314,6 +314,7 @@ func (d *Driver) Create() error {
 		"--natdnsproxy1", "off",
 		"--cpuhotplug", "off",
 		"--pae", "on",
+		"--longmode", "on",
 		"--hpet", "on",
 		"--hwvirtex", "on",
 		"--nestedpaging", "on",
