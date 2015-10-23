@@ -220,6 +220,7 @@ func (d *Driver) Create() error {
 		"--rtcuseutc", "on",
 		"--cpuhotplug", "off",
 		"--pae", "on",
+		"--longmode", "on",
 		"--synthcpu", "off",
 		"--hpet", "on",
 		"--hwvirtex", "on",
